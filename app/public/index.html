@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mock API</title>
+  <link rel="stylesheet" href="/vendor/bootstrap-flat-css/bootstrap-flat.css">
+  <link rel="stylesheet" href="/assets/css/app.css">
+</head>
+<body class="full-width">
+<div class="container">
+  <h4 class="page-header">Mock API</h4>
+
+  <form class="form-horizontal" action="/create" method="post">
+    <!-- Status Code -->
+    <div class="form-group">
+      <label for="status-code" class="col-sm-2 control-label">Status Code</label>
+      <div class="col-sm-4">
+        <select class="form-control" id="status-code">
+          <option value="200">200 OK</option>
+        </select>
+      </div>
+    </div>
+    <!-- Content Type -->
+    <div class="form-group">
+      <label for="content-type" class="col-sm-2 control-label">Content Type</label>
+      <div class="col-sm-6 row no-padding-right">
+        <div class="col-sm-8 small-padding-right">
+          <select class="form-control" id="content-type">
+            <option value="application/json">application/json</option>
+          </select>
+        </div>
+        <div class="col-sm-4 no-padding-right">
+          <select class="form-control" id="content-encoding">
+            <option value="application/json">UTF-8</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Body -->
+    <div class="form-group">
+      <label for="body" class="col-sm-2 control-label">Body</label>
+      <div class="col-sm-6">
+        <textarea class="form-control body-texterea" id="body"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-2 col-sm-offset-2">
+        <input type="submit" value="Create" class="btn btn-block btn-primary">
+      </div>
+    </div>
+  </form>
+
+  </div>
+</body>
+</html>
