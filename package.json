@@ -1,0 +1,21 @@
+{
+  "name": "mock-api",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app",
+    "nodemon": "nodemon app",
+    "livereload": "node livereload",
+    "grunt-compass": "grunt compass:dist",
+    "dev": "concurrent \"npm run grunt-compass\" \"npm run livereload\" \"npm run nodemon\" "
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-compass": "^1.1.1"
+  }
+}
