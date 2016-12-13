@@ -1,0 +1,6 @@
+{
+  "name": "Mock API",
+  "dependencies": {
+    "bootstrap-flat-css": "^0.1.0"
+  }
+}
