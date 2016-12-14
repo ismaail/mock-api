@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser');
+const routes = require('./routes/routes');
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
 
 const app = express();
 
@@ -17,9 +17,8 @@ app.use(cors());
 // Static files directory
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/public/index.html'));
-});
+// Setup routes
+app.use('/', routes);
 
 // Start the server
 app.listen(port, () => {
