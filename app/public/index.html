@@ -12,47 +12,50 @@
 <div class="container">
   <h4 class="page-header">Mock API</h4>
 
-  <form class="form-horizontal" action="/create" method="post">
+  <div class="alert alert-info alert-dismissible message-infobox" role="alert" id="message-infobox">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, illum <a href="#">http://localhost:3000/585093934a447f1254199197</a>
+    </div>
+  </div>
+
+  <form class="form-horizontal" action="/create" method="post" id="main-form">
     <!-- Status Code -->
     <div class="form-group">
-      <label for="status-code" class="col-sm-2 control-label">Status Code</label>
+      <label for="input-status-code" class="col-sm-2 control-label">Status Code</label>
       <div class="col-sm-4">
-        <select class="form-control" id="status-code">
+        <select class="form-control" id="input-status-code">
           <option value="200">200 OK</option>
         </select>
       </div>
     </div>
     <!-- Content Type -->
     <div class="form-group">
-      <label for="content-type" class="col-sm-2 control-label">Content Type</label>
-      <div class="col-sm-6 row no-padding-right">
-        <div class="col-sm-8 small-padding-right">
-          <select class="form-control" id="content-type">
-            <option value="application/json">application/json</option>
-          </select>
-        </div>
-        <div class="col-sm-4 no-padding-right">
-          <select class="form-control" id="content-encoding">
-            <option value="application/json">UTF-8</option>
-          </select>
-        </div>
+      <label for="input-content-type" class="col-sm-2 control-label">Content Type</label>
+      <div class="col-sm-4">
+        <select class="form-control" id="input-content-type">
+          <option value="application/json">application/json</option>
+        </select>
       </div>
     </div>
     <!-- Body -->
     <div class="form-group">
-      <label for="body" class="col-sm-2 control-label">Body</label>
+      <label for="input-body" class="col-sm-2 control-label">Body</label>
       <div class="col-sm-6">
-        <textarea class="form-control body-texterea" id="body"></textarea>
+        <textarea class="form-control body-texterea" id="input-body" required="required"></textarea>
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-2 col-sm-offset-2">
-        <input type="submit" value="Create" class="btn btn-block btn-primary">
+        <input type="submit" value="Create" class="btn btn-block btn-primary" id="input-create-button">
       </div>
     </div>
   </form>
 
   </div>
+
+  <script src="/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/assets/js/create.js"></script>
 </body>
 </html>
