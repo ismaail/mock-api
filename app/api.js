@@ -11,6 +11,7 @@ class Api {
       ApiModel.find({}, (err, result) => {
         if (err) {
           reject(err);
+          return;
         }
 
         resolve(result);
